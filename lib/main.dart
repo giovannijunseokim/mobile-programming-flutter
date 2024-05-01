@@ -21,6 +21,7 @@ class MyApp extends StatelessWidget {
               height: 50,
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset("assets/Instagram_logo.png"),
                   Row(
@@ -61,6 +62,7 @@ class MyApp extends StatelessWidget {
               padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 30),
               child: Row(
                 mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                crossAxisAlignment: CrossAxisAlignment.center,
                 children: [
                   Image.asset("assets/Home.png"),
                   Image.asset("assets/Search.png"),
