@@ -12,7 +12,9 @@ class MyApp extends StatelessWidget {
         body: Column(
           children: [
             // Status Bar
-            const SizedBox(),
+            const SizedBox(
+              height: 44,
+            ),
             // Top
             Container(),
             // Body
