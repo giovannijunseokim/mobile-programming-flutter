@@ -56,7 +56,20 @@ class MyApp extends StatelessWidget {
               child: Column(),
             ),
             // Bottom
-            Container()
+            Container(
+              height: 50,
+              padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 30),
+              child: Row(
+                mainAxisAlignment: MainAxisAlignment.spaceBetween,
+                children: [
+                  Image.asset("assets/Home.png"),
+                  Image.asset("assets/Search.png"),
+                  Image.asset("assets/Reels.png"),
+                  Image.asset("assets/Shop.png"),
+                  Image.asset("assets/Profile_picture_01.png"),
+                ],
+              ),
+            )
           ],
         ),
       ),
