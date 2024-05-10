@@ -26,11 +26,13 @@ class MyApp extends StatelessWidget {
                   // user list
                   Container(
                     padding: const EdgeInsets.symmetric(vertical: 8),
-                    height: 108,
+                    height: 109,
                     decoration: BoxDecoration(
                       border: Border(
-                        bottom:
-                            BorderSide(width: 0.5, color: Colors.grey.shade300),
+                        bottom: BorderSide(
+                          width: 0.5,
+                          color: Colors.grey.shade300,
+                        ),
                       ),
                     ),
                     child: const SingleChildScrollView(
@@ -109,6 +111,340 @@ class MyApp extends StatelessWidget {
                             ),
                             Image.asset(
                               'assets/Feed_picture_03.png',
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        height: 42,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/Heart.png',
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Image.asset(
+                              'assets/Comment.png',
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Image.asset(
+                              'assets/Share.png',
+                            ),
+                            const Spacer(),
+                            Image.asset(
+                              'assets/Bookmark.png',
+                            ),
+                          ],
+                        ),
+                      ),
+                      // Details
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text.rich(
+                              TextSpan(
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                                children: [
+                                  // Number of likes
+                                  TextSpan(
+                                    text: 'awesome_application',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '님외',
+                                  ),
+                                  TextSpan(
+                                    text: '10명',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '이 좋아합니다',
+                                  ),
+                                ],
+                              ),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 8,
+                            ),
+                            // Article
+                            Text.rich(
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              TextSpan(
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'flutter_framework',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                      text:
+                                          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"),
+                                ],
+                              ),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 5,
+                            ),
+                            // Number of comment
+                            Text(
+                              "댓글 102개 모두 보기",
+                              style: TextStyle(
+                                  color: Colors.black54, fontSize: 12),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 5,
+                            ),
+                            // Last comment time
+                            Text(
+                              "1일전",
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontSize: 10,
+                              ),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 16,
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      // User Info
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        height: 52,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/Profile_picture_02.png',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            const Text(
+                              "flutter_framework",
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
+                            ),
+                            const Spacer(),
+                            const Icon(
+                              Icons.more_horiz,
+                              size: 18,
+                            )
+                          ],
+                        ),
+                      ),
+                      // feed Pictures
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/Feed_picture_04.png',
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                            Image.asset(
+                              'assets/Feed_picture_05.png',
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                            Image.asset(
+                              'assets/Feed_picture_06.png',
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                          ],
+                        ),
+                      ),
+                      Container(
+                        padding: const EdgeInsets.symmetric(
+                          horizontal: 12,
+                          vertical: 8,
+                        ),
+                        height: 42,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/Heart.png',
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Image.asset(
+                              'assets/Comment.png',
+                            ),
+                            const SizedBox(
+                              width: 12,
+                            ),
+                            Image.asset(
+                              'assets/Share.png',
+                            ),
+                            const Spacer(),
+                            Image.asset(
+                              'assets/Bookmark.png',
+                            ),
+                          ],
+                        ),
+                      ),
+                      // Details
+                      Container(
+                        padding: const EdgeInsets.symmetric(horizontal: 15),
+                        child: const Column(
+                          crossAxisAlignment: CrossAxisAlignment.start,
+                          children: [
+                            Text.rich(
+                              TextSpan(
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                                children: [
+                                  // Number of likes
+                                  TextSpan(
+                                    text: 'awesome_application',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '님외',
+                                  ),
+                                  TextSpan(
+                                    text: '10명',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                    text: '이 좋아합니다',
+                                  ),
+                                ],
+                              ),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 8,
+                            ),
+                            // Article
+                            Text.rich(
+                              maxLines: 2,
+                              overflow: TextOverflow.ellipsis,
+                              TextSpan(
+                                style: TextStyle(
+                                  fontSize: 12,
+                                ),
+                                children: [
+                                  TextSpan(
+                                    text: 'flutter_framework',
+                                    style: TextStyle(
+                                      fontWeight: FontWeight.w600,
+                                    ),
+                                  ),
+                                  TextSpan(
+                                      text:
+                                          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"),
+                                ],
+                              ),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 5,
+                            ),
+                            // Number of comment
+                            Text(
+                              "댓글 102개 모두 보기",
+                              style: TextStyle(
+                                  color: Colors.black54, fontSize: 12),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 5,
+                            ),
+                            // Last comment time
+                            Text(
+                              "1일전",
+                              style: TextStyle(
+                                color: Colors.black54,
+                                fontSize: 10,
+                              ),
+                            ),
+                            // Empty space
+                            SizedBox(
+                              height: 16,
+                            ),
+                          ],
+                        ),
+                      )
+                    ],
+                  ),
+                  Column(
+                    children: [
+                      // User Info
+                      Container(
+                        padding: const EdgeInsets.all(10),
+                        height: 52,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/Profile_picture_02.png',
+                            ),
+                            const SizedBox(
+                              width: 10,
+                            ),
+                            const Text(
+                              "flutter_framework",
+                              style: TextStyle(
+                                  fontSize: 12, fontWeight: FontWeight.bold),
+                            ),
+                            const Spacer(),
+                            const Icon(
+                              Icons.more_horiz,
+                              size: 18,
+                            )
+                          ],
+                        ),
+                      ),
+                      // feed Pictures
+                      SingleChildScrollView(
+                        scrollDirection: Axis.horizontal,
+                        child: Row(
+                          children: [
+                            Image.asset(
+                              'assets/Feed_picture_07.png',
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                            Image.asset(
+                              'assets/Feed_picture_08.png',
+                              width: MediaQuery.of(context).size.width,
+                            ),
+                            Image.asset(
+                              'assets/Feed_picture_09.png',
                               width: MediaQuery.of(context).size.width,
                             ),
                           ],
