@@ -1,4 +1,7 @@
 import 'package:flutter/material.dart';
+import 'package:mobile_programming_flutter/components/bottom_widget.dart';
+import 'package:mobile_programming_flutter/components/top_widget.dart';
+import 'package:mobile_programming_flutter/constants/border_styles.dart';
 
 void main() {
   runApp(MyApp());
@@ -29,10 +32,7 @@ class MyApp extends StatelessWidget {
                     height: 109,
                     decoration: BoxDecoration(
                       border: Border(
-                        bottom: BorderSide(
-                          width: 0.5,
-                          color: Colors.grey.shade300,
-                        ),
+                        bottom: BorderStyles.lightGreySide,
                       ),
                     ),
                     child: const SingleChildScrollView(
@@ -69,507 +69,51 @@ class MyApp extends StatelessWidget {
                     ),
                   ),
                   // Feeds
-                  Column(
-                    children: [
-                      // User Info
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        height: 52,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Profile_picture_02.png',
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            const Text(
-                              "flutter_framework",
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
-                            ),
-                            const Spacer(),
-                            const Icon(
-                              Icons.more_horiz,
-                              size: 18,
-                            )
-                          ],
-                        ),
-                      ),
-                      // feed Pictures
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Feed_picture_01.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                            Image.asset(
-                              'assets/Feed_picture_02.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                            Image.asset(
-                              'assets/Feed_picture_03.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 8,
-                        ),
-                        height: 42,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Heart.png',
-                            ),
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            Image.asset(
-                              'assets/Comment.png',
-                            ),
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            Image.asset(
-                              'assets/Share.png',
-                            ),
-                            const Spacer(),
-                            Image.asset(
-                              'assets/Bookmark.png',
-                            ),
-                          ],
-                        ),
-                      ),
-                      // Details
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 15),
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text.rich(
-                              TextSpan(
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
-                                children: [
-                                  // Number of likes
-                                  TextSpan(
-                                    text: 'awesome_application',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: '님외',
-                                  ),
-                                  TextSpan(
-                                    text: '10명',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: '이 좋아합니다',
-                                  ),
-                                ],
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 8,
-                            ),
-                            // Article
-                            Text.rich(
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              TextSpan(
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: 'flutter_framework',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                      text:
-                                          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"),
-                                ],
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 5,
-                            ),
-                            // Number of comment
-                            Text(
-                              "댓글 102개 모두 보기",
-                              style: TextStyle(
-                                  color: Colors.black54, fontSize: 12),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 5,
-                            ),
-                            // Last comment time
-                            Text(
-                              "1일전",
-                              style: TextStyle(
-                                color: Colors.black54,
-                                fontSize: 10,
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 16,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      // User Info
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        height: 52,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Profile_picture_02.png',
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            const Text(
-                              "flutter_framework",
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
-                            ),
-                            const Spacer(),
-                            const Icon(
-                              Icons.more_horiz,
-                              size: 18,
-                            )
-                          ],
-                        ),
-                      ),
-                      // feed Pictures
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Feed_picture_04.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                            Image.asset(
-                              'assets/Feed_picture_05.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                            Image.asset(
-                              'assets/Feed_picture_06.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 8,
-                        ),
-                        height: 42,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Heart.png',
-                            ),
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            Image.asset(
-                              'assets/Comment.png',
-                            ),
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            Image.asset(
-                              'assets/Share.png',
-                            ),
-                            const Spacer(),
-                            Image.asset(
-                              'assets/Bookmark.png',
-                            ),
-                          ],
-                        ),
-                      ),
-                      // Details
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 15),
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text.rich(
-                              TextSpan(
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
-                                children: [
-                                  // Number of likes
-                                  TextSpan(
-                                    text: 'awesome_application',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: '님외',
-                                  ),
-                                  TextSpan(
-                                    text: '10명',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: '이 좋아합니다',
-                                  ),
-                                ],
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 8,
-                            ),
-                            // Article
-                            Text.rich(
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              TextSpan(
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: 'flutter_framework',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                      text:
-                                          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"),
-                                ],
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 5,
-                            ),
-                            // Number of comment
-                            Text(
-                              "댓글 102개 모두 보기",
-                              style: TextStyle(
-                                  color: Colors.black54, fontSize: 12),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 5,
-                            ),
-                            // Last comment time
-                            Text(
-                              "1일전",
-                              style: TextStyle(
-                                color: Colors.black54,
-                                fontSize: 10,
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 16,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  ),
-                  Column(
-                    children: [
-                      // User Info
-                      Container(
-                        padding: const EdgeInsets.all(10),
-                        height: 52,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Profile_picture_02.png',
-                            ),
-                            const SizedBox(
-                              width: 10,
-                            ),
-                            const Text(
-                              "flutter_framework",
-                              style: TextStyle(
-                                  fontSize: 12, fontWeight: FontWeight.bold),
-                            ),
-                            const Spacer(),
-                            const Icon(
-                              Icons.more_horiz,
-                              size: 18,
-                            )
-                          ],
-                        ),
-                      ),
-                      // feed Pictures
-                      SingleChildScrollView(
-                        scrollDirection: Axis.horizontal,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Feed_picture_07.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                            Image.asset(
-                              'assets/Feed_picture_08.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                            Image.asset(
-                              'assets/Feed_picture_09.png',
-                              width: MediaQuery.of(context).size.width,
-                            ),
-                          ],
-                        ),
-                      ),
-                      Container(
-                        padding: const EdgeInsets.symmetric(
-                          horizontal: 12,
-                          vertical: 8,
-                        ),
-                        height: 42,
-                        child: Row(
-                          children: [
-                            Image.asset(
-                              'assets/Heart.png',
-                            ),
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            Image.asset(
-                              'assets/Comment.png',
-                            ),
-                            const SizedBox(
-                              width: 12,
-                            ),
-                            Image.asset(
-                              'assets/Share.png',
-                            ),
-                            const Spacer(),
-                            Image.asset(
-                              'assets/Bookmark.png',
-                            ),
-                          ],
-                        ),
-                      ),
-                      // Details
-                      Container(
-                        padding: const EdgeInsets.symmetric(horizontal: 15),
-                        child: const Column(
-                          crossAxisAlignment: CrossAxisAlignment.start,
-                          children: [
-                            Text.rich(
-                              TextSpan(
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
-                                children: [
-                                  // Number of likes
-                                  TextSpan(
-                                    text: 'awesome_application',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: '님외',
-                                  ),
-                                  TextSpan(
-                                    text: '10명',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                    text: '이 좋아합니다',
-                                  ),
-                                ],
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 8,
-                            ),
-                            // Article
-                            Text.rich(
-                              maxLines: 2,
-                              overflow: TextOverflow.ellipsis,
-                              TextSpan(
-                                style: TextStyle(
-                                  fontSize: 12,
-                                ),
-                                children: [
-                                  TextSpan(
-                                    text: 'flutter_framework',
-                                    style: TextStyle(
-                                      fontWeight: FontWeight.w600,
-                                    ),
-                                  ),
-                                  TextSpan(
-                                      text:
-                                          " Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore"),
-                                ],
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 5,
-                            ),
-                            // Number of comment
-                            Text(
-                              "댓글 102개 모두 보기",
-                              style: TextStyle(
-                                  color: Colors.black54, fontSize: 12),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 5,
-                            ),
-                            // Last comment time
-                            Text(
-                              "1일전",
-                              style: TextStyle(
-                                color: Colors.black54,
-                                fontSize: 10,
-                              ),
-                            ),
-                            // Empty space
-                            SizedBox(
-                              height: 16,
-                            ),
-                          ],
-                        ),
-                      )
-                    ],
-                  )
+                  // feed 1
+                  const Feed(
+                      userName: "flutter_framework",
+                      userPicture: "assets/Profile_picture_02.png",
+                      picturePaths: [
+                        "assets/Feed_picture_01.png",
+                        "assets/Feed_picture_02.png",
+                        "assets/Feed_picture_03.png"
+                      ],
+                      otherUserName: "awesome_application",
+                      countLikes: 10,
+                      countReplies: 102,
+                      article:
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                      lastMinutes: 5),
+                  // feed 2
+                  const Feed(
+                      userName: "flutter_framework",
+                      userPicture: "assets/Profile_picture_02.png",
+                      picturePaths: [
+                        "assets/Feed_picture_04.png",
+                        "assets/Feed_picture_05.png",
+                        "assets/Feed_picture_06.png"
+                      ],
+                      otherUserName: "awesome_application",
+                      countLikes: 10,
+                      countReplies: 102,
+                      article:
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                      lastMinutes: 100),
+                  // feed 3
+                  const Feed(
+                      userName: "flutter_framework",
+                      userPicture: "assets/Profile_picture_02.png",
+                      picturePaths: [
+                        "assets/Feed_picture_07.png",
+                        "assets/Feed_picture_08.png",
+                        "assets/Feed_picture_09.png"
+                      ],
+                      otherUserName: "awesome_application",
+                      countLikes: 10,
+                      countReplies: 102,
+                      article:
+                          "Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore",
+                      lastMinutes: 1000),
                 ],
               ),
             )),
@@ -577,50 +121,6 @@ class MyApp extends StatelessWidget {
             const BottomWidget()
           ],
         ),
-      ),
-    );
-  }
-}
-
-class TopWidget extends StatelessWidget {
-  const TopWidget({super.key});
-
-  @override
-  Widget build(BuildContext context) {
-    return Container(
-      padding: const EdgeInsets.fromLTRB(10, 6, 15, 0),
-      height: 50,
-      child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
-        children: [
-          Image.asset("assets/Instagram_logo.png"),
-          Row(
-            children: [
-              Image.asset(
-                "assets/Add.png",
-                width: 28,
-                height: 28,
-              ),
-              const SizedBox(
-                width: 18,
-              ),
-              Image.asset(
-                "assets/Heart.png",
-                width: 28,
-                height: 28,
-              ),
-              const SizedBox(
-                width: 18,
-              ),
-              Image.asset(
-                "assets/Share.png",
-                width: 28,
-                height: 28,
-              ),
-            ],
-          )
-        ],
       ),
     );
   }
@@ -725,23 +225,240 @@ class UserProfileCard extends StatelessWidget {
   }
 }
 
-class BottomWidget extends StatelessWidget {
-  const BottomWidget({super.key});
+class Feed extends StatelessWidget {
+  final String userName;
+  final String userPicture;
+  final List<String> picturePaths;
+  final String otherUserName;
+  final int countLikes;
+  final int countReplies;
+  final String article;
+  final int lastMinutes;
+
+  const Feed(
+      {super.key,
+      required this.userName,
+      required this.userPicture,
+      required this.picturePaths,
+      required this.otherUserName,
+      required this.countLikes,
+      required this.countReplies,
+      required this.article,
+      required this.lastMinutes});
+
+  @override
+  Widget build(BuildContext context) {
+    return Column(
+      children: [
+        FeedUserInfo(
+          userName: userName,
+          userPicture: userPicture,
+        ),
+        FeedPictures(
+          picturePaths: picturePaths,
+        ),
+        FeedActionIcons(),
+        FeedDetails(
+          otherUsername: otherUserName,
+          countLikes: countLikes,
+          countReplies: countReplies,
+          userName: userName,
+          article: article,
+          lastMinutes: lastMinutes,
+        )
+      ],
+    );
+  }
+}
+
+class FeedUserInfo extends StatelessWidget {
+  final String userName, userPicture;
+
+  const FeedUserInfo(
+      {super.key, required this.userName, required this.userPicture});
 
   @override
   Widget build(BuildContext context) {
     return Container(
-      height: 50,
-      padding: const EdgeInsets.symmetric(vertical: 12, horizontal: 30),
+      padding: const EdgeInsets.all(10),
+      height: 52,
       child: Row(
-        mainAxisAlignment: MainAxisAlignment.spaceBetween,
-        crossAxisAlignment: CrossAxisAlignment.center,
         children: [
-          Image.asset("assets/Home.png"),
-          Image.asset("assets/Search.png"),
-          Image.asset("assets/Reels.png"),
-          Image.asset("assets/Shop.png"),
-          Image.asset("assets/Profile_picture_01.png"),
+          Image.asset(userPicture),
+          const SizedBox(width: 10),
+          Text(
+            userName,
+            style: const TextStyle(
+              fontSize: 12,
+              fontWeight: FontWeight.bold,
+            ),
+          ),
+          const Spacer(),
+          const Icon(
+            Icons.more_horiz,
+            size: 18,
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class FeedPictures extends StatelessWidget {
+  final List<String> picturePaths;
+
+  const FeedPictures({super.key, required this.picturePaths});
+
+  @override
+  Widget build(BuildContext context) {
+    return SingleChildScrollView(
+      scrollDirection: Axis.horizontal,
+      child: Row(
+        children: picturePaths
+            .map(
+              (picturesPath) => Image.asset(
+                picturesPath,
+                width: MediaQuery.of(context).size.width,
+              ),
+            )
+            .toList(),
+      ),
+    );
+  }
+}
+
+class FeedActionIcons extends StatelessWidget {
+  const FeedActionIcons({super.key});
+
+  @override
+  Widget build(BuildContext context) {
+    return Container(
+      padding: const EdgeInsets.symmetric(
+        horizontal: 12,
+        vertical: 8,
+      ),
+      height: 42,
+      child: Row(
+        children: [
+          Image.asset(
+            'assets/Heart.png',
+          ),
+          const SizedBox(
+            width: 12,
+          ),
+          Image.asset(
+            'assets/Comment.png',
+          ),
+          const SizedBox(
+            width: 12,
+          ),
+          Image.asset(
+            'assets/Share.png',
+          ),
+          const Spacer(),
+          Image.asset(
+            'assets/Bookmark.png',
+          ),
+        ],
+      ),
+    );
+  }
+}
+
+class FeedDetails extends StatelessWidget {
+  final String otherUsername;
+  final int countLikes;
+  final int countReplies;
+  final String userName;
+  final String article;
+  final int lastMinutes;
+
+  const FeedDetails({
+    super.key,
+    required this.otherUsername,
+    required this.countLikes,
+    required this.countReplies,
+    required this.userName,
+    required this.article,
+    required this.lastMinutes,
+  });
+
+  @override
+  Widget build(BuildContext context) {
+    const TextStyle regular = TextStyle(
+      fontSize: 12,
+    );
+    const TextStyle bold = TextStyle(
+      fontWeight: FontWeight.w600,
+    );
+
+    return Container(
+      padding: const EdgeInsets.symmetric(horizontal: 15),
+      child: Column(
+        crossAxisAlignment: CrossAxisAlignment.start,
+        children: [
+          Text.rich(
+            TextSpan(
+              style: regular,
+              children: <InlineSpan>[
+                // Number of likes
+                TextSpan(
+                  text: otherUsername,
+                  style: bold,
+                ),
+                const TextSpan(
+                  text: '님 외 ',
+                ),
+                TextSpan(
+                  text: "${countLikes < 100 ? countLikes : "여러 "}명",
+                  style: bold,
+                ),
+                const TextSpan(
+                  text: '이 좋아합니다',
+                ),
+              ],
+            ),
+          ),
+          // Empty space
+          const SizedBox(height: 8),
+          // Article
+          Text.rich(
+            maxLines: 2,
+            overflow: TextOverflow.ellipsis,
+            TextSpan(
+              style: regular,
+              children: [
+                TextSpan(
+                  text: "$userName ",
+                  style: bold,
+                ),
+                TextSpan(text: article),
+              ],
+            ),
+          ),
+          // Empty space
+          const SizedBox(height: 5),
+          // Number of comment
+          Text(
+            "댓글 $countReplies개 모두 보기",
+            style: const TextStyle(color: Colors.black54, fontSize: 12),
+          ),
+          // Empty space
+          const SizedBox(height: 5),
+          // Last comment time
+          Text(
+            lastMinutes < 60
+                ? '$lastMinutes분 전'
+                : lastMinutes < 1440
+                    ? '${lastMinutes ~/ 60}시간 전'
+                    : '${lastMinutes ~/ 1440}일 전',
+            style: const TextStyle(
+              color: Colors.black54,
+              fontSize: 10,
+            ),
+          ),
+          // Empty space
+          const SizedBox(height: 16),
         ],
       ),
     );
